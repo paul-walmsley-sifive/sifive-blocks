@@ -52,7 +52,7 @@ abstract class GPIO(busWidthBytes: Int, c: GPIOParams)(implicit p: Parameters)
     extends IORegisterRouter(
       RegisterRouterParams(
         name = "gpio",
-        compat = Seq("sifive,gpio0", "sifive,gpio1"),
+        compat = Seq("sifive,gpio1", "sifive,gpio0"),
         base = c.address,
         beatBytes = busWidthBytes),
       new GPIOPortIO(c))
